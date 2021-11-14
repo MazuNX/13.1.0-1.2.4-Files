@@ -1,0 +1,34 @@
+[config]
+autoboot=0
+autoboot_list=0
+bootwait=3
+backlight=100
+autohosoff=0
+autonogc=1
+updater2p=0
+bootprotect=0
+{------ Atmosphere ------}
+[Atmosphere FSS0 EmuMMC]
+fss0=atmosphere/package3
+kip1patch=nosigchk
+kip1=atmosphere/kips/*
+emummcforce=1
+id=emummc
+{}
+[Atmosphere FSS0 SYS]
+fss0=atmosphere/package3
+kip1patch=nosigchk
+kip1=atmosphere/kips/*
+emummc_force_disable=1
+id=sysnand
+{}
+[CFW (Alt Boot - Fusee)]
+payload=/bootloader/payloads/fusee.bin
+id=fusee
+{}
+{-------- Stock ---------}
+[Stock SYS]
+fss0=atmosphere/package3
+stock=1
+emummc_force_disable=1
+id=stock
